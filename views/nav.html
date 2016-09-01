@@ -1,0 +1,29 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+   <div class="container-fluid" id="navContainer">
+      <div class="navbar-header">
+         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span> 
+         </button>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+         <div class="row">
+            <img src="views/images/smithNephew.png" class="navHidden">
+            <ul class="nav navbar-nav navbar-right navHidden">
+               <li><a href="">My Approvals <em class="navItems">3</em></a></li>
+               <li><a href="#">My Items <em class="navItems">6</em></a></li>
+               <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span><em class="navItems">2</em></a></li>
+               <li><a href="#"><span class="glyphicon glyphicon-globe"></span><em class="navItems"> ENG</em></a></li>
+               <li><a href="#">Welcome, John <span class="glyphicon glyphicon-user"></span></a></li>
+            </ul>
+         </div>
+         <ul class="nav navbar-nav">
+            <li ng-class="{ active:panel.isSelected(1) }"><a href ng-click="panel.selectTab(1)">About Us</a></li>
+            <li ng-class="{ active:panel.isSelected(2) }"><a href ng-click="panel.selectTab(2)">I Have a Question</a></li>
+            <li ng-class="{ active:panel.isSelected(3) }"><a href ng-click="panel.selectTab(3)">I Have an Issue</a></li>
+            <li ng-class="{ active:panel.isSelected(4) }"><a href ng-click="panel.selectTab(4)">Contact Us</a></li>
+         </ul>
+      </div>
+   </div>
+</nav>

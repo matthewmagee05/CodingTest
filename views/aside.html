@@ -1,0 +1,55 @@
+<section ng-controller="OrderController as order">
+   <div class="row aside" >
+      <div class="row">
+         <h4>MY REQUESTS</h4>
+         <hr class="hrStyle">
+      </div>
+      <ul class="list-group">
+         <li class="list-group listStyle" ng-repeat="a in order.orderItems">
+            <h5>{{a.name}}</h5>
+            <p>{{a.number}}</p>
+            <p>{{a.date}}</p>
+            <hr>
+         </li>
+      </ul>
+      <button class="btn btn-primary btn-md">View More</button>
+      <div class="row marginTop">
+         <h4>DO YOU NEED HELP?</h4>
+         <hr class="hrStyle">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-md-3 col-xs-5 col-lg-3">
+                  <img src="views/images/phone.png" class="img-responsive" alt="Some picture" width="410" height="307">
+               </div>
+               <div class="col-md-9">
+                  <div class="row">
+                     <h5>1 (800) 555-5555</h5>
+                  </div>
+                  <div class="row">
+                     <p>24/7 Support</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="row marginTop">
+         <h4>CURRENT STATUS</h4>
+         <hr class="hrStyle">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-md-3 col-xs-5 col-lg-3">
+                  <img src="views/images/check.png" class="img-responsive" alt="Some picture" width="410" height="307">
+               </div>
+               <div class="col-md-9">
+                  <div class="row">
+                     <h6>No System is Reporting an Issue</h6>
+                  </div>
+                  <div class="row">
+                     <h6>More Information</h6>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>

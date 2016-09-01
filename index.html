@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="app">
+   <head>
+      <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"/>
+      <link rel="stylesheet" type="text/css" href="styles/styles.css"/>
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+      <meta name="viewport" content="width=device-width, user-scalable=false;">
+   </head>
+   <body ng-controller="DataController as data">
+      <section ng-controller="PanelController as panel">
+         <div ng-include src="'views/nav.html'"></div>
+         <div ng-include src="'views/header.html'"></div>
+         <div class="row">
+            <div class="col-md-9 col-lg-9 col-xs-9">
+               <div class="row">
+                  <div ng-include src="'views/panelGroup.html'"></div>
+               </div>
+               <div class="row">
+                  <div id="navContainer">
+                     <div class="col-md-12 col-lg-12 col-xs-12 panel">
+                     	<h3 class="news">LATEST NEWS</h3>
+                     	<hr class="hrStyle">
+                        <ul class="list-group">
+                           <li class="list-group listStyle" ng-repeat="news in data.newsFeed">
+                              <h3>{{news.title}}</h3>
+                              <p>{{news.description}}</p>
+                              <p>{{news.body}}</p>
+                              <img ng-src="{{news.image}}">
+                              <button class="btn btn-primary btn-md">Read More</button>
+                              <hr>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-3 col-lg-3 col-xs-3">
+               <div ng-include src="'views/aside.html'"></div>
+            </div>
+         </div>
+      </section>
+      <div class="row">
+      	<button class="bottomButton btn btn-primary btn-md">Live Chat</button>
+	  	<button class="bottomButton2 btn btn-primary btn-md">Customer Feedback</button>
+      </div>
+      
+      <script type="text/javascript" src="jquery-3.1.0.min.js"></script>
+      <script type="text/javascript" src="angular.min.js"></script>
+      <script type="text/javascript" src="app.js"></script>
+      <script src="bootstrap/js/bootstrap.min.js"></script>
+   </body>
+</html>
